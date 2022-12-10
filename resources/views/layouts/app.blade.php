@@ -54,6 +54,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
+                                @if(auth()->user()->role_id == 2)
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -65,6 +66,19 @@
                                         @csrf
                                     </form>
                                 </div>
+                                @else
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                @endif
                             </li>
                         @endguest
                     </ul>
