@@ -1,0 +1,30 @@
+1. composer require laravel/ui
+2. php artisan ui bootstrap --auth
+3. npm install && npm run dev/build
+===
+=> create role table
+=> create role_id field in user table, and create forgen key with role table.
+=> and register user with default role id
+=> dubligate all user auth related controller, becoz we work same as user auth.
+=> create dashboard controller show dashboard view file.
+=> all view file dublicate for admin. in user.
+=> change handeler.php and change some middleware.\
+=> config logincontroler, if role == admin then go to admin dashboard same as user.
+
+
+
+
+
+
+
+
+
+==TUTORIAL==
+https://www.youtube.com/watch?v=y8XdEkCWiRc&ab_channel=WebJourney
+===
+https://www.youtube.com/playlist?list=PLHozlRsShHZ2AESLCsFbncUGgQn7A2beR
+
+https://www.youtube.com/watch?v=nrPbY1cl2sg&ab_channel=WebTechKnowledge
+
+
+learn middleware
