@@ -38,6 +38,7 @@ Route::prefix('/admin')->name('admin.')->group(function (){
 //dashboard route
 Route::prefix('/admin')->name('admin.')->group(function (){
     Route::get('/dashboard',[DashboardController::class,'index']);
+    Route::get('/show',[DashboardController::class,'show']);
 });
 Route::prefix('/user')->name('user.')->group(function (){
     Route::get('/dashboard',[DashboardUser::class,'index']);
